@@ -2,6 +2,7 @@
 from selenium import webdriver
 from time import  *
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 driver=webdriver.Firefox()
 driver.get('http://www.baidu.com')
 sleep(2)
@@ -21,4 +22,3 @@ driver.find_element_by_id('kw').send_keys(Keys.CONTROL,'v')
 sleep(2)
 driver.find_element_by_id('kw').send_keys(Keys.ENTER)
 sleep(2)
-driver.quit()
