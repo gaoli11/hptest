@@ -1,6 +1,8 @@
-# encoding: utf-8
-'''
-Created on 2015年12月13日
-
-@author: hpyton
-'''
+# encoding = utf-8
+from selenium import webdriver
+from time import *
+from mydef import Login
+driver=webdriver.Firefox()
+driver.get('http://www.weibo.com/')
+sleep(5)
+Login(driver)
