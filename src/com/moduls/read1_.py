@@ -34,8 +34,9 @@ for i in values:
     password1.send_keys(encrypt(i.split(';')[1]))
     print(i.split(';')[0],'==>',encrypt(i.split(';')[1]))
     sleep(2) 
-    button1= WebDriverWait(driver,10,0.5).until(EC.presence_of_element_located((By.XPATH,"//div[@class='info_header']/following-sibling::div[1]/div[6]//span")))
+    button1= WebDriverWait(driver,10,2).until(EC.presence_of_element_located((By.XPATH,"//div[@class='info_header']/following-sibling::div[1]/div[6]//span")))
     button1.click()
+    sleep(2)
     result=ElementExist(driver,"//span[text()='用户名或密码错误。']")
     print(result)
     if result:
