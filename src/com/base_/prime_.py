@@ -1,16 +1,17 @@
 #coding=utf-8
-lists=[]
+
 def is_Prime(n):
+    lists=[]
     if n<=1:
-        print "it is not a prime!"
+        return False
     else :
         for i in range(2,n):
             lists.append(n%i)
        # print lists
         if( 0  in lists):
-            print "it is not a prime!"                          
+            return False                        
         else:
-            print   "it is a prime!"
-        
-is_Prime(11)    
+            return True
+            
+is_Prime(10)    
     
